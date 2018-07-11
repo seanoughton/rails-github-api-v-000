@@ -6,7 +6,7 @@ describe "authentication" do
     expect(page).to have_content 'your_username'
   end
 end
-=end
+
 describe "visiting root" do
   before :each do
     page.set_rack_session(:token => "1")
@@ -34,4 +34,5 @@ describe "new repo form" do
       with(:body => {name: "a-new-repo"}.to_json,
       :headers => {'Authorization' => "token 1"})
   end
+=end
 end
